@@ -145,3 +145,4 @@ fun CheckoutScreenPreview() {
             .verticalScroll(rememberScrollState())
     )
 }
+

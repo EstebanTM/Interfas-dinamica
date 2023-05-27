@@ -12,14 +12,17 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * git config --global --add safe.directory 'D:/Itsur/Programacion movil 1/Unidad 6/Interfaz-dinamica'
  */
 package com.example.lunchtray
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material3.*
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -28,10 +31,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lunchtray.ui.OrderViewModel
 
-// TODO: Screen enum
-
-// TODO: AppBar
-// subir desde mi cuenta
 enum class LunchTrayScreen(@StringRes val title: Int){
     Inicio(title = R.string.app_name),
     Entrada(title = R.string.choose_entree),
@@ -39,7 +38,7 @@ enum class LunchTrayScreen(@StringRes val title: Int){
     Acompaniamiento(title = R.string.choose_accompaniment),
     Confirmacion(title = R.string.order_checkout)
 }
-// agregar
+
 @Composable
 fun LunchTrayAppBar(
     @StringRes currentScreenTitle: Int,
@@ -81,7 +80,3 @@ fun LunchTrayApp() {
     }
 }
 
-@Composable
-fun Extraparacommit(){
-
-}
